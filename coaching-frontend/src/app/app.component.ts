@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { UserHandlerService } from './services/user-handler.service';
 import { MaintenanceMessageHandlerService } from './services/maintenancemessage-handler.service';
-import { User } from './user';
+import { User } from './models/user';
 import notify from 'devextreme/ui/notify';
 import { confirm, alert } from 'devextreme/ui/dialog';
 import { environment } from 'src/environments/environment';

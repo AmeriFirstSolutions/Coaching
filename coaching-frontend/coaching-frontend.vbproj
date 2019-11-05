@@ -177,9 +177,9 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.spec.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\models\User.ts" />
     <TypeScriptCompile Include="src\app\services\maintenancemessage-handler.service.ts" />
     <TypeScriptCompile Include="src\app\services\user-handler.service.ts" />
-    <TypeScriptCompile Include="src\app\User.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.test.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
