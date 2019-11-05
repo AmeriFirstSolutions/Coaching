@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "coaching-backend", "coaching-backend\coaching-backend.vbproj", "{8BBFE2F9-3DAA-4554-A513-1668A3DDD622}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "coaching-frontend", "coaching-frontend\coaching-frontend.vbproj", "{CA89E658-963C-45BB-BBA0-3139C97EAE1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BBFE2F9-3DAA-4554-A513-1668A3DDD622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBFE2F9-3DAA-4554-A513-1668A3DDD622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBFE2F9-3DAA-4554-A513-1668A3DDD622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBFE2F9-3DAA-4554-A513-1668A3DDD622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA89E658-963C-45BB-BBA0-3139C97EAE1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA89E658-963C-45BB-BBA0-3139C97EAE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA89E658-963C-45BB-BBA0-3139C97EAE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA89E658-963C-45BB-BBA0-3139C97EAE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9DCFECD-1BCE-4CF0-AFDD-A9CD762BFF25}
+	EndGlobalSection
+EndGlobal

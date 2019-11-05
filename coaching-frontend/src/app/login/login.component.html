@@ -1,0 +1,10 @@
+
+<div id="container">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="UserName" #username />
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="UserPassword" (keyup.enter)="loginUser(username.value,password.value)" #password>
+  <div id="lower">
+    <input type="button" value = "Login"(click)="loginUser(username.value,password.value)"/>
+  </div>
+</div>
