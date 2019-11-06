@@ -23,6 +23,7 @@ export class UserHandlerService {
         if (serverResponsePackage['Data']) {
           curUser.UserName = serverResponsePackage['Data'].UserName;
           curUser.UserPassword = serverResponsePackage['Data'].UserPassword;
+          curUser.UserTeam = serverResponsePackage['Data'].UserTeam;
           return curUser;
         } else {
           throw new Error();

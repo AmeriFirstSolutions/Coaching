@@ -16,6 +16,7 @@ export class AppComponent {
 
   @Input()
   loggedInUserName: string = null;
+  loggedInUserTeam: string = null;
 
   @Input()
   loggedInUserPassword: string = null;
@@ -55,6 +56,8 @@ export class AppComponent {
         else {
           this.loggedInUserName = user.UserName;
           this.loggedInUserPassword = user.UserPassword;
+          this.loggedInUserTeam = user.UserTeam;
+         
         }
       }
     )

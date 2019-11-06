@@ -21,29 +21,55 @@ Public Class DatabaseConnector
         Return ConnectionString
     End Function
 
+    Public Function GetEmployees(ByVal userTeam As String) As String
+        DBConnection = New SqlConnection(GetConnectionString())
+        Dim SelectReturnString As String = "Select UserName From CD_User Where PermissionLevel < 2 and Active = 1 and Team = '" + userTeam + "' "
+        Dim SelectCommand As New SqlCommand(SelectReturnString, DBConnection)
+        DBConnection.Open()
+        Dim employeeList As String
+        employeeList = ""
+        Using Reader = SelectCommand.ExecuteReader()
+            If Reader.HasRows Then
+                Reader.Read()
+                employeeList = Reader.Item("UserName").ToString
+                Do While Reader.Read
+                    employeeList = employeeList + ";" + Reader.Item("UserName").ToString
+                Loop
+            End If
+        End Using
+        DBConnection.Close()
+        Return employeeList
+        MsgBox(employeeList)
+    End Function
     Friend Function GetUserInfoLDAP(thisUser As User) As User
 
         Dim curUser = New User()
         Dim test = Nothing
+        Dim curTeam As String = Nothing
 
         Try
             If AuthenticateUser("LDAP://OU=AMERIFIRST Users,DC=amerifirst,DC=local", thisUser.UserName, thisUser.UserPassword) Then
 
+                curTeam = GetTeam(thisUser.UserName)
 
                 If (thisUser.UserName <> Nothing) Then
                     curUser.UserName = thisUser.UserName
+                    curUser.UserTeam = curTeam
                     test = logLoginAction(thisUser, "True", "CD")
                 Else
                     curUser.UserName = ""
+                    curUser.UserTeam = ""
                     test = logLoginAction(thisUser, "False", "CD")
                 End If
 
             Else
                 curUser.UserName = ""
+                curUser.UserTeam = ""
                 test = logLoginAction(thisUser, "False", "CD")
             End If
         Catch ex As Exception
             curUser.UserName = ""
+            curUser.UserTeam = ""
             test = logLoginAction(thisUser, "False", "CD")
             logQuery("Error on LDAP Login", "Failure", thisUser.UserName, ex.Message, ex.Source, ex.StackTrace, ex.TargetSite.ToString())
         End Try
@@ -51,6 +77,30 @@ Public Class DatabaseConnector
         Return curUser
 
     End Function
+
+    Private Function GetTeam(username As String)
+        DBConnection = New SqlConnection(GetConnectionString())
+        Dim ReturningLookupQueryString As String = "SELECT UserID,Team FROM CD_User WHERE UserID='" + username + "' And PermissionLevel > 0 And Active = '1'"
+        Dim SelectCommand As New SqlCommand(ReturningLookupQueryString, DBConnection)
+        DBConnection.Open()
+        Dim curTeam As String = ""
+
+        Using Reader = SelectCommand.ExecuteReader()
+            If Reader.HasRows Then
+                Reader.Read()
+
+                curTeam = Reader.Item("Team").ToString()
+            Else
+                curTeam = Nothing
+            End If
+        End Using
+
+        DBConnection.Close()
+
+        Return curTeam
+
+    End Function
+
 
     Private Function logLoginAction(thisUser As User, attemptResult As String, app As String)
         DBConnection = New SqlConnection(GetConnectionString())

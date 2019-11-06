@@ -1,0 +1,45 @@
+<div id="container">
+
+  <div class=row>
+    <div class="dx-field-label " id="employeeNameLabel"><b>Employee Name</b></div>
+    <select class="col-2" id="employeeName" #employeeName>
+      <option> </option>
+      <option *ngFor="let name of employeeNames">{{name}}</option>
+    </select>
+
+    <div class="dx-field-label " id="coachNameLabel"><b>Coach Name</b></div>
+    <input class="col-2" id="coachName" maxlength="50" #CoachName />
+
+    <div class="dx-field-label " id="dateOfCoachingLabel"><b>Date of Coaching</b></div>
+    <dx-date-box class="col-2" id="dateOfCoaching" #dateOfCoaching
+                 type="date">
+    </dx-date-box>
+
+  </div>
+
+
+  <div class=row>
+    <div id="commentarea">
+      <label><b>Coaching Notes:</b><textarea id="comments" cols="195" rows="5"></textarea></label>
+
+
+    </div>
+    <label id="attendanceRelatedLabel"><b>Attendance Related?</b></label>
+    <input type="checkbox" id="attendanceRelated" #attendanceRelated />
+  </div>
+
+
+  <div class=row>
+    <div>
+      <button type="button" id="saveButton" class="btn btn-primary">Save</button>
+    </div>
+
+    <div>
+      <button type="button" id="DeleteButton" class="btn btn-danger">Delete </button>
+    </div>
+   </div>
+
+
+
+
+</div>

@@ -220,6 +220,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.vb" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.vb" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.vb" />
+    <Compile Include="Controllers\EmployeeController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Controllers\MaintenanceMessageController.vb" />
     <Compile Include="Controllers\UserController.vb" />
@@ -229,6 +230,7 @@
     </Compile>
     <Compile Include="Models\MaintenanceMessage.vb" />
     <Compile Include="Models\OperationResult.vb" />
+    <Compile Include="Models\Record.vb" />
     <Compile Include="Models\User.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -410,6 +412,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Properties\" />
+    <Folder Include="Views\Employee\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>

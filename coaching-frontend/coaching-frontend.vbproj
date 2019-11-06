@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,6 +97,8 @@
     <Content Include="e2e\protractor.conf.js" />
     <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\coaching-entry\coaching-entry.component.css" />
+    <Content Include="src\app\coaching-entry\coaching-entry.component.html" />
     <Content Include="src\app\login\login.component.css" />
     <Content Include="src\app\login\login.component.html" />
     <Content Include="src\assets\favicon.png" />
@@ -175,10 +177,15 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\coaching-entry\coaching-entry.component.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.spec.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\models\maintenancemessage.ts" />
+    <TypeScriptCompile Include="src\app\models\operationresult.ts" />
+    <TypeScriptCompile Include="src\app\models\Record.ts" />
     <TypeScriptCompile Include="src\app\models\User.ts" />
     <TypeScriptCompile Include="src\app\services\maintenancemessage-handler.service.ts" />
+    <TypeScriptCompile Include="src\app\services\record-handler.service.ts" />
     <TypeScriptCompile Include="src\app\services\user-handler.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.test.ts" />

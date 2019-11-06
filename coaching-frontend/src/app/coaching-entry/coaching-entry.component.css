@@ -1,0 +1,72 @@
+#container {
+  width: 1500px;
+  margin-top: 100px;
+  display: block;
+  margin-left: 250px;
+} 
+
+#employeeNameLabel {
+  width:150px;
+}
+
+#employeeName {
+  margin-bottom:20px;
+}
+
+#coachNameLabel {
+  width: 120px;
+  margin-left: 100px;
+}
+
+#coachName {
+  margin-bottom:20px;
+  
+}
+
+#dateOfCoachingLabel {
+  width: 150px;
+  margin-left: 100px;
+}
+
+#dateOfCoaching {
+  margin-bottom:20px;
+}
+
+#attendanceRelatedLabel {
+  margin-top: 25px;
+  margin-left:1163px;
+}
+#attendanceRelated {
+  margin-top: 31px;
+  margin-left:5px;
+}
+
+#commentarea {
+  margin-top:25px;
+  vertical-align: top;
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+#comments {
+  vertical-align: top;
+  resize: none
+}
+
+
+.btn.btn-primary {
+  background-color: #2d6b91;
+}
+
+.btn.btn-success {
+  background-color: #5bc2a5;
+}
+
+.btn.btn-danger {
+  background-color: #f16356;
+}
+
+.btn {
+  margin-right: 20px;
+  margin-top: 5px;
+} 

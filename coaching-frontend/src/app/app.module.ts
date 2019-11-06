@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { CoachingEntryComponent } from './coaching-entry/coaching-entry.component';
 
 // DevExtreme 
 import {
@@ -23,17 +24,19 @@ import {
   DxPopupModule,
   DxFileUploaderModule,
   DxNumberBoxModule,
-  DxChartModule
-} from 'devextreme-angular';
+  DxTextAreaModule
+} from 'devextreme-angular'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CoachingEntryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    // AngularFontAwesomeModule,
     DxDataGridModule,
     DxBulletModule,
     DxTemplateModule,
@@ -51,7 +54,7 @@ import {
     DxPopupModule,
     DxFileUploaderModule,
     DxNumberBoxModule,
-    DxChartModule
+    DxTextAreaModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,8 @@
   </div>
 
   <div class="row" *ngIf="loggedInUserName">
-    
+    <div class="col-sm-11" id="coachingEntry">
+      <coaching-entry [loggedInUserName]="loggedInUserName" ></coaching-entry>
+    </div> 
   </div>
 
