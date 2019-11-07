@@ -6,6 +6,7 @@ import { confirm, alert } from 'devextreme/ui/dialog';
 import { Record } from 'src/app/models/Record'
 import { RecordHandlerService } from 'src/app/services/record-handler.service'
 import { UserHandlerService } from 'src/app/services/user-handler.service'
+
 import {
   DxDropDownBoxModule,
   DxTreeViewModule,
@@ -39,8 +40,22 @@ export class CoachingEntryComponent implements OnInit {
 
     this.recordHandlerService.getEmployeeNames(this.loggedInUserTeam).subscribe((employeeNames) => {
       this.employeeNames = employeeNames.split(';')
-      console.log (this.employeeNames)
-    }); 
+      
+    });
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

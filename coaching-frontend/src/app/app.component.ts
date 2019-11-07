@@ -16,6 +16,8 @@ export class AppComponent {
 
   @Input()
   loggedInUserName: string = null;
+
+  @Input()
   loggedInUserTeam: string = null;
 
   @Input()
@@ -23,7 +25,7 @@ export class AppComponent {
 
 
   ngOnInit() {
-    this.loadMaintenanceMessage("SD");
+    this.loadMaintenanceMessage("CD");
 
 
   }
@@ -57,6 +59,7 @@ export class AppComponent {
           this.loggedInUserName = user.UserName;
           this.loggedInUserPassword = user.UserPassword;
           this.loggedInUserTeam = user.UserTeam;
+         
          
         }
       }

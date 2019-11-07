@@ -39,7 +39,7 @@ Public Class DatabaseConnector
         End Using
         DBConnection.Close()
         Return employeeList
-        MsgBox(employeeList)
+
     End Function
     Friend Function GetUserInfoLDAP(thisUser As User) As User
 
